@@ -17,5 +17,5 @@ Damit das Skript beim booten auch aufgerufen wird, führen wir folgendes aus: su
 
 Nun sollte das Programm bei starten auch ausgeführt werden.
 
-# Booten des Scripts
+# Entfernen des Scripts
 Solltest du eines Tages dich umentscheiden und das Programm aus dem Autostart nehmen wollen, kannst du dies mit: sudo update-rc.d -f  toggle_light remove

@@ -1,5 +1,18 @@
 # ToggleLight
 
+## Schaltung testen
+GPIO8 = LED ein/aus schalten
+GPIO7 = Relaise ein/aus schalten
+
+
+
+**cd /sys/class/gpio
+echo "8">export
+echo "out">gpio8/direction
+echo "1">gpio8/value
+echo "0">gpio8/value**
+
+
 ## Python Programm installieren und testen
 Als erstes muß das Python-Programm **toggle_light.py** in das Verzeichnis **/home/pi/SwitchLED/toggle** kopiert werden.
 Ob das Programm startet, kann man mit **python SwitchLED/toggle/toggle_light.py** testen.

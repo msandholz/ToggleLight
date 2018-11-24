@@ -3,10 +3,9 @@
 # Script als Linux-Service starten
 Als erstes muss im Verzeichnis /etc/init.d/ ein Skript erstellt werden, mittels welchem das Programm gestartet wird. Hierzu die Datei toggle_light in das Verzeichnis /etc/init.d/ kopieren.
 
-Das Kopieren kann man mit WinSCP machen. Vorher beötigt man aber Root-Rechte.
-Einloggen mit dem Nutzer pi und folgendes Kommando absetzen:
-sudo su
-passwd <neues Passwort zweimal eintragen>
+Das Kopieren kann man mit WinSCP machen. Vorher benötigt man aber Root-Rechte.
+1. Einloggen mit dem Nutzer pi und folgendes Kommando absetzen: sudo passwd root
+2. Mit dem Kommando nano /etc/ssh/sshd_config die Konfigurationsdatei öffnen und den Wert PermitRootLogin yes setzen.
 
 
 # Lese- & Schreib-Rechte vergeben

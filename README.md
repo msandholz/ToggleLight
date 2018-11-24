@@ -7,6 +7,11 @@
 >GPIO  9 = Lichtstatus messen |
 >GPIO 11 = Button
 
+Mit dem Befehl `gpio -v` kann man prüfen, ob die WiringPi Bibliothek auf dem Raspi installiert ist. Mit dem Befehl `gpio readall` kann man sich Pinbelegung und Status ausgeben lassen.
+
+Mit dem Befehl `gpio write 10 1` kann man die LED ein und mit `gpio write 10 0` wieder ausschalten.
+
+
 ```
 cd /sys/class/gpio
 echo "8">export
@@ -15,7 +20,7 @@ echo "1">gpio8/value
 echo "0">gpio8/value
 ```
 ## WiringPi testen
-Mit dem Befehl `gpio -v` kann man prüfen, ob die WiringPi Bibliothek auf dem Raspi installiert ist. Mit dem Befehl `gpio readall` kann man sich Pinbelegung und Status ausgeben lassen.
+
 
 ## Python Programm installieren und testen
 Als erstes muß das Python-Programm `toggle_light.py` in das Verzeichnis `/home/pi/SwitchLED/toggle` kopiert werden.

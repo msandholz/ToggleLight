@@ -1,10 +1,10 @@
 # ToggleLight
 
 ## Schaltung testen
->**Schaltungsbelegung** 
->GPIO  7 = Relaise ein/aus schalten 
->GPIO  8 = LED ein/aus schalten 
->GPIO  9 = Lichtstatus messen 
+>**Schaltungsbelegung**: 
+> GPIO  7 = Relaise ein/aus schalten | 
+>GPIO  8 = LED ein/aus schalten | 
+>GPIO  9 = Lichtstatus messen |
 >GPIO 11 = Button
 
 ```

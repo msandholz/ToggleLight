@@ -14,7 +14,8 @@ echo "out">gpio8/direction
 echo "1">gpio8/value
 echo "0">gpio8/value
 ```
-
+## WiringPi testen
+Mit dem Befehl `gpio -v` kann man prüfen, ob die WiringPi Bibliothek auf dem Raspi installiert ist.
 
 ## Python Programm installieren und testen
 Als erstes muß das Python-Programm `toggle_light.py` in das Verzeichnis `/home/pi/SwitchLED/toggle` kopiert werden.

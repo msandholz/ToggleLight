@@ -1,10 +1,10 @@
 # ToggleLight
 
 ## Schaltung testen
-GPIO8 = LED ein/aus schalten
-GPIO7 = Relaise ein/aus schalten
-
-
+GPIO  7 = Relaise ein/aus schalten
+GPIO  8 = LED ein/aus schalten
+GPIO  9 = Lichtstatus messen
+GPIO 11 = Button
 
 **cd /sys/class/gpio
 echo "8">export

@@ -6,11 +6,13 @@ GPIO  8 = LED ein/aus schalten
 GPIO  9 = Lichtstatus messen
 GPIO 11 = Button
 
-**cd /sys/class/gpio
+'''
+cd /sys/class/gpio
 echo "8">export
 echo "out">gpio8/direction
 echo "1">gpio8/value
-echo "0">gpio8/value**
+echo "0">gpio8/value
+'''
 
 
 ## Python Programm installieren und testen

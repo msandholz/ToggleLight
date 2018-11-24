@@ -1,7 +1,7 @@
 # ToggleLight
 
 ## Schaltung testen
->**Schaltungsbelegung**: 
+>**Schaltungsbelegung (WiringPi)**: 
 >GPIO 10 = LED ein/aus schalten | 
 >GPIO 11 = Relaise ein/aus schalten | 
 >GPIO 13 = Lichtstatus messen |

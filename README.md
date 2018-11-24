@@ -6,6 +6,7 @@ Als erstes muss im Verzeichnis /etc/init.d/ ein Skript erstellt werden, mittels 
 Das Kopieren kann man mit WinSCP machen. Vorher benötigt man aber Root-Rechte.
 1. Einloggen mit dem Nutzer pi und folgendes Kommando absetzen: sudo passwd root
 2. Mit dem Kommando nano /etc/ssh/sshd_config die Konfigurationsdatei öffnen und den Wert PermitRootLogin yes setzen.
+3. Raspi neu starten mit sudo shutdown -r 0
 
 
 # Lese- & Schreib-Rechte vergeben

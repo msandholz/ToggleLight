@@ -2,7 +2,7 @@
 
 # Python Programm installieren und testen
 Als erstes muß das Python-Programm **toggle_light.py** in das Verzeichnis **/home/pi/SwitchLED/toggle** kopiert werden.
-
+Ob das Programm startet, kann man mit **python SwitchLED/toggle/toggle_light.py** testen.
 
 # Script als Linux-Service starten
 Will man das Python-Programm als Linux-Service starten, muss im Verzeichnis **/etc/init.d/** ein Skript angelegt werden. Hierzu die Datei **toggle_light** in das Verzeichnis **/etc/init.d/** kopieren.

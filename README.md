@@ -3,6 +3,12 @@
 # Script als Linux-Service starten
 Als erstes muss im Verzeichnis /etc/init.d/ ein Skript erstellt werden, mittels welchem das Programm gestartet wird. Hierzu die Datei toggle_light in das Verzeichnis /etc/init.d/ kopieren.
 
+Das Kopieren kann man mit WinSCP machen. Vorher beötigt man aber Root-Rechte.
+Einloggen mit dem Nutzer pi und folgendes Kommando absetzen:
+sudo su
+passwd <neues Passwort zweimal eintragen>
+
+
 # Lese- & Schreib-Rechte vergeben
 Als nächstes weisen wir die benötigten Rechte zu (Lesen & Schreiben): sudo chmod 755 /etc/init.d/NameDesSkripts
 

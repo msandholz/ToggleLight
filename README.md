@@ -1,7 +1,7 @@
 # ToggleLight
 
 # Python Programm installieren und testen
-Als 
+Als erstes muß das Python-Programm **toggle_light.py** in das Verzeichnis **/home/pi/SwitchLED/toggle** kopiert werden.
 
 
 # Script als Linux-Service starten

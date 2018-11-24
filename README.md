@@ -2,10 +2,10 @@
 
 ## Schaltung testen
 >**Schaltungsbelegung**: 
-> GPIO  7 = Relaise ein/aus schalten | 
+> GPIO  7 (wPi:11)= Relaise ein/aus schalten | 
 >GPIO  8 (wPi:10) = LED ein/aus schalten | 
 >GPIO  9 (wPi:13) = Lichtstatus messen |
->GPIO 11 = Button
+>GPIO 11 (wPi:14) = Button
 
 Mit dem Befehl `gpio -v` kann man prüfen, ob die WiringPi Bibliothek auf dem Raspi installiert ist. Mit dem Befehl `gpio readall` kann man sich Pinbelegung und Status ausgeben lassen.
 

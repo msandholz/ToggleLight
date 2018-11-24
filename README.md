@@ -1,7 +1,11 @@
 # ToggleLight
 
+# Python Programm installieren und testen
+Als 
+
+
 # Script als Linux-Service starten
-Als erstes muss im Verzeichnis **/etc/init.d/** ein Skript erstellt werden, mittels welchem das Programm gestartet wird. Hierzu die Datei **toggle_light** in das Verzeichnis **/etc/init.d/** kopieren.
+Will man das Python-Programm als Linux-Service starten, muss im Verzeichnis **/etc/init.d/** ein Skript angelegt werden. Hierzu die Datei **toggle_light** in das Verzeichnis **/etc/init.d/** kopieren.
 
 Das Kopieren kann man mit WinSCP durchführen. Vorher benötigt man aber Root-Rechte.
 1. Einloggen mit dem Nutzer **pi** und folgendes Kommando absetzen: **sudo passwd root**
@@ -10,7 +14,7 @@ Das Kopieren kann man mit WinSCP durchführen. Vorher benötigt man aber Root-Re
 
 
 # Lese- & Schreib-Rechte vergeben
-Als nächstes weisen wir die benötigten Rechte zu (Lesen & Schreiben): **sudo chmod 755 /etc/init.d/NameDesSkripts**
+Als nächstes weisen wir die benötigten Rechte zu (Lesen & Schreiben): **sudo chmod 755 /etc/init.d/toggle_light**
 
 # Start des Scripts
 Wir testen das Skript indem wir es starten:  **sudo /etc/init.d/toggle_light start**

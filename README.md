@@ -12,8 +12,8 @@ Mit dem Befehl `gpio -v` kann man prüfen, ob die WiringPi Bibliothek auf dem Ra
 Mit dem Befehlen `gpio -g mode 8 out` und `gpio -g write 8 1` kann man die LED ein und mit `gpio -g write 8 0` wieder ausschalten. Mit `gpio -g read 9` kann man den Status der LED messen.
 
 ## Python Programm installieren und testen
-Als erstes muß das Python-Programm `toggle_light.py` in das Verzeichnis `/home/pi/SwitchLED/toggle` kopiert werden.
-Ob das Programm startet, kann man mit `python SwitchLED/toggle/toggle_light.py` testen.
+Als erstes muß das Python-Programm `toggle_light.py` in das Verzeichnis `/home/pi/SwitchLED` kopiert werden.
+Ob das Programm startet, kann man mit `python SwitchLED/toggle_light.py` testen.
 
 ## Script als Linux-Service starten
 Will man das Python-Programm als Linux-Service starten, muss im Verzeichnis `/etc/init.d/` ein Skript angelegt werden. Hierzu die Datei `toggle_light` in das Verzeichnis `/etc/init.d/` kopieren.

@@ -1,15 +1,15 @@
 # ToggleLight
 
 ## Schaltung testen
->**Schaltungsbelegung (WiringPi)**: 
->GPIO 10 = LED ein/aus schalten | 
->GPIO 11 = Relais ein/aus schalten | 
->GPIO 13 = LED Status messen |
->GPIO 14 = Button
+>**Schaltungsbelegung (BCM)**: 
+>GPIO 7 = Relais ein/aus schalten | 
+>GPIO 8 = LED ein/aus schalten | 
+>GPIO 9 = LED Status messen |
+>GPIO 11 = Button
 
 Mit dem Befehl `gpio -v` kann man prüfen, ob die WiringPi Bibliothek auf dem Raspi installiert ist. Mit dem Befehl `gpio readall` kann man sich Pinbelegung und Status ausgeben lassen.
 
-Mit dem Befehlen `gpio mode 10 out` und `gpio write 10 1` kann man die LED ein und mit `gpio write 10 0` wieder ausschalten. Mit `gpio read 13` kann man den Status der LED messen.
+Mit dem Befehlen `gpio -g mode 8 out` und `gpio -g write 8 1` kann man die LED ein und mit `gpio -g write 8 0` wieder ausschalten. Mit `gpio -g read 9` kann man den Status der LED messen.
 
 ## Python Programm installieren und testen
 Als erstes muß das Python-Programm `toggle_light.py` in das Verzeichnis `/home/pi/SwitchLED/toggle` kopiert werden.
@@ -48,17 +48,17 @@ Um in OctoPrint CustomControls anzulegen, muss man in der Datei `/home/pi/.octop
 system:
   actions:
   - action: LED on
-    command: gpio write 10 1
+    command: gpio -g write 8 1
     name: LED on
   - action: LED off
-    command: gpio write 10 0
+    command: gpio -g write 8 0
     name: LED off
   - action: Printer on
-    command: gpio write 11 0
+    command: gpio -g write 7 0
     confirm: Switching Printer on...
     name: Printer on
   - action: Printer off
-    command: gpio write 11 1
+    command: gpio -g write 7 1
     confirm: Switching printer off...
     name: Printer off
 ```

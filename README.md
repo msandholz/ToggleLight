@@ -49,11 +49,9 @@ system:
   actions:
   - action: LED on
     command: gpio write 10 1
-    confirm: Switching LED on.
     name: LED on
   - action: LED off
     command: gpio write 10 0
-    confirm: Switching LED off.
     name: LED off
   - action: Printer on
     command: gpio write 11 1

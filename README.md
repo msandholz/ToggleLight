@@ -54,11 +54,11 @@ system:
     command: gpio write 10 0
     name: LED off
   - action: Printer on
-    command: gpio write 11 1
+    command: gpio write 11 0
     confirm: Switching Printer on...
     name: Printer on
   - action: Printer off
-    command: gpio write 11 0
+    command: gpio write 11 1
     confirm: Switching printer off...
     name: Printer off
 ```

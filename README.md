@@ -40,3 +40,27 @@ Nun sollte das Programm bei starten auch ausgeführt werden.
 
 ### Entfernen des Scripts
 Solltest du eines Tages dich umentscheiden und das Programm aus dem Autostart nehmen wollen, kannst du dies mit: `sudo update-rc.d -f  toggle_light remove`
+
+## CustomControls in OctoPrint anlegen
+Um in OctoPrint CustomControls anzulegen, muss man in der Datei `/home/pi/.octoprint/config.yaml` folgende Zeilen hinzufügen:
+
+```
+system:
+  actions:
+  - action: LED on
+    command: gpio write 10 1
+    confirm: Switching LED on.
+    name: LED on
+  - action: LED off
+    command: gpio write 10 0
+    confirm: Switching LED off.
+    name: LED off
+  - action: Printer on
+    command: gpio write 11 1
+    confirm: Switching Printer on...
+    name: Printer on
+  - action: Printer off
+    command: gpio write 11 0
+    confirm: Switching printer off...
+    name: Printer off
+```

@@ -49,9 +49,11 @@ system:
   actions:
   - action: LED on
     command: gpio -g write 8 1
+    confirm: false
     name: LED on
   - action: LED off
     command: gpio -g write 8 0
+    confirm: false
     name: LED off
   - action: Printer on
     command: gpio -g write 7 0
@@ -61,4 +63,12 @@ system:
     command: gpio -g write 7 1
     confirm: Switching printer off...
     name: Printer off
+  - action: streamon
+    command: sudo service webcamd start
+    confirm: false
+    name: Start video stream
+  - action: streamoff
+    command: sudo service webcamd stop
+    confirm: false
+    name: Stop video stream   
 ```

@@ -2,21 +2,24 @@
 
 ## Schaltung testen
 >**Schaltungsbelegung (BCM)**: 
->GPIO 7 = Relais ein/aus schalten | 
->GPIO 8 = LED ein/aus schalten | 
->GPIO 9 = LED Status messen |
->GPIO 11 = Button
+>GPIO 25 = LED ein/aus schalten | 
+>GPIO 24 = LED Status messen |
+>GPIO 18 = Button
 
 Mit dem Befehl `gpio -v` kann man prüfen, ob die WiringPi Bibliothek auf dem Raspi installiert ist. Mit dem Befehl `gpio readall` kann man sich Pinbelegung und Status ausgeben lassen.
 
-Mit dem Befehlen `gpio -g mode 8 out` und `gpio -g write 8 1` kann man die LED ein und mit `gpio -g write 8 0` wieder ausschalten. Mit `gpio -g read 9` kann man den Status der LED messen.
+Mit dem Befehlen `gpio -g mode 25 out` und `gpio -g write 25 1` kann man die LED ein und mit `gpio -g write 25 0` wieder ausschalten. Mit `gpio -g read 24` kann man den Status der LED messen.
 
 ## Python Programm installieren und testen
-Als erstes muß das Python-Programm `toggle_light.py` in das Verzeichnis `/home/pi/SwitchLED` kopiert werden.
-Ob das Programm startet, kann man mit `python SwitchLED/toggle_light.py` testen.
+Als erstes müssen die Programme `SwitchLED.py` und `switchLED.service` in das Verzeichnis `/home/pi/SwitchLED` kopiert werden.
+Ob das Programm startet, kann man mit `python SwitchLED/SwitchLED.py` testen.
 
 ## Script als Linux-Service starten
 Will man das Python-Programm als Linux-Service starten, muss im Verzeichnis `/etc/init.d/` ein Skript angelegt werden. Hierzu die Datei `toggle_light` in das Verzeichnis `/etc/init.d/` kopieren.
+
+
+====
+
 
 Das Kopieren kann man mit WinSCP durchführen. Vorher benötigt man aber Root-Rechte.
 1. Einloggen mit dem Nutzer `pi` und folgendes Kommando absetzen: `sudo passwd root`

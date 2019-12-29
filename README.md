@@ -43,7 +43,7 @@ Den Status des Dienstes kann man mit `ystemctl status switchLED.service` prüfen
 ```
 pi@octopi:~ $ systemctl status switchLED.service
 ● switchLED.service - SwitchLED
-   Loaded: loaded (/etc/systemd/system/switchLED.service; disabled; vendor prese
+   Loaded: loaded (/etc/systemd/system/switchLED.service; enabled; vendor preset: enabled)
    Active: active (running) since Sun 2019-12-29 11:11:23 CET; 7s ago
  Main PID: 810 (python)
     Tasks: 1 (limit: 2077)

@@ -12,10 +12,10 @@ Mit dem Befehlen `gpio -g mode 25 out` und `gpio -g write 25 1` kann man die LED
 
 ## Python Programm installieren und testen
 Als erstes müssen die Programme `SwitchLED.py` und `switchLED.service` in das Verzeichnis `/home/pi/SwitchLED` kopiert werden.
-Ob das Programm startet, kann man mit `python SwitchLED/SwitchLED.py` testen.
+Ob das Programm startet, kann man mit `python SwitchLED/SwitchLED.py` testen. Das Kopieren kann man mit WinSCP durchführen.
 
 ## Script als Linux-Service starten
-Will man das Python-Programm als Linux-Service starten, muss im Verzeichnis `/etc/init.d/` ein Skript angelegt werden. Hierzu die Datei `toggle_light` in das Verzeichnis `/etc/init.d/` kopieren.
+Will man das Python-Programm als Linux-Service starten, muss man die Datei `switchLED.service` in das Verzeichnis `/etc/systemd/system/` kopieren. Hierzu muß man das Kommando `sudo cp switchLED.service /etc/systemd/system/switchLED.service` absetzen.
 
 
 ====

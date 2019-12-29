@@ -24,15 +24,22 @@ Will man das Python-Programm als Linux-Service starten, muss man die Datei `swit
 Wir testen das Skript indem wir es starten:  `sudo systemctl start switchLED.service`
 
 ### Stoppen des Scripts
-Wir können das Script wieder stoppen mit: `sudo systemctl start switchLED.service`
+Wir können das Script wieder stoppen mit: `sudo systemctl stop switchLED.service`
+
+### Abbrechen des Scripts
+Wir können das Script sofort stoppen mit: `sudo systemctl kill switchLED.service`
 
 ### Enablen des Scripts
 Damit das Skript beim booten auch aufgerufen wird, führen wir folgendes aus: `sudo systemctl enable switchLED.service`
 
-Nun sollte das Programm bei booten auch ausgeführt werden.
+Mit `systemclt is-enabled switchLED.service` kann man prüfen, ob der Dienst beim Booten gestartet wird.
+
+### Disablen des Scripts
+Damit das Skript beim booten auch aufgerufen wird, führen wir folgendes aus: `sudo systemctl disable switchLED.service`
+
 
 ### Status prüfen
-
+Den Status des Dienstes kann man mit `ystemctl status switchLED.service` prüfen.
 ```
 pi@octopi:~ $ systemctl status switchLED.service
 ● switchLED.service - SwitchLED
@@ -47,8 +54,6 @@ pi@octopi:~ $ systemctl status switchLED.service
 Dez 29 11:11:23 octopi systemd[1]: Started SwitchLED.
 ```
 
-### Entfernen des Scripts
-Solltest du eines Tages dich umentscheiden und das Programm aus dem Autostart nehmen wollen, kannst du dies mit: `sudo update-rc.d -f  toggle_light remove`
 
 ## CustomControls in OctoPrint anlegen
 Um in OctoPrint CustomControls anzulegen, muss man in der Datei `/home/pi/.octoprint/config.yaml` folgende Zeilen hinzufügen:

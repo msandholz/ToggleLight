@@ -31,15 +31,18 @@ Das Kopieren kann man mit WinSCP durchführen. Vorher benötigt man aber Root-Re
 Als nächstes weisen wir die benötigten Rechte zu (Lesen & Schreiben): `sudo chmod 755 /etc/init.d/toggle_light`
 
 ### Start des Scripts
-Wir testen das Skript indem wir es starten:  `sudo /etc/init.d/toggle_light start`
+Wir testen das Skript indem wir es starten:  `sudo systemctl start switchLED.service`
 
 ### Stoppen des Scripts
-Wir können das Script wieder stoppen mit: `sudo /etc/init.d/toggle_light stop`
+Wir können das Script wieder stoppen mit: `sudo systemctl start switchLED.service`
 
-### Booten des Scripts
-Damit das Skript beim booten auch aufgerufen wird, führen wir folgendes aus: `sudo update-rc.d toggle_light defaults`
+### Enablen des Scripts
+Damit das Skript beim booten auch aufgerufen wird, führen wir folgendes aus: `sudo systemctl enable switchLED.service`
 
-Nun sollte das Programm bei starten auch ausgeführt werden.
+Nun sollte das Programm bei booten auch ausgeführt werden.
+
+
+
 
 ### Entfernen des Scripts
 Solltest du eines Tages dich umentscheiden und das Programm aus dem Autostart nehmen wollen, kannst du dies mit: `sudo update-rc.d -f  toggle_light remove`

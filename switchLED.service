@@ -1,0 +1,14 @@
+[Unit]
+Discription=SwitchLED
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u SwitchLED.py
+WorkingDirectory=/home/pi/SwitchLED
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target

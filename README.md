@@ -18,19 +18,7 @@ Ob das Programm startet, kann man mit `python SwitchLED/SwitchLED.py` testen. Da
 Als nächstes weisen wir die benötigten Rechte zu (Lesen, Schreiben, Ausführen): `sudo chmod 755 /home/pi/SwitchLED/SwitchLED.py`
 
 ## Script als Linux-Service starten
-Will man das Python-Programm als Linux-Service starten, muss man die Datei `switchLED.service` in das Verzeichnis `/etc/systemd/system/` kopieren. Hierzu muß man das Kommando `sudo cp switchLED.service /etc/systemd/system/switchLED.service` absetzen.
-
-
-====
-
-
-Das Kopieren kann man mit WinSCP durchführen. Vorher benötigt man aber Root-Rechte.
-1. Einloggen mit dem Nutzer `pi` und folgendes Kommando absetzen: `sudo passwd root`
-2. Mit dem Kommando `nano /etc/ssh/sshd_config` die Konfigurationsdatei öffnen und den Wert `PermitRootLogin yes` setzen.
-3. Raspi neu starten mit `sudo shutdown -r 0`
-
-
-
+Will man das Python-Programm als Linux-Service starten, muss man die Datei `switchLED.service` in das Verzeichnis `/etc/systemd/system/` kopieren. Hierzu muß man das Kommando `sudo cp switchLED.service /etc/systemd/system/switchLED.service` absetzen
 
 ### Start des Scripts
 Wir testen das Skript indem wir es starten:  `sudo systemctl start switchLED.service`
@@ -43,8 +31,21 @@ Damit das Skript beim booten auch aufgerufen wird, führen wir folgendes aus: `s
 
 Nun sollte das Programm bei booten auch ausgeführt werden.
 
+### Status prüfen
 
+```
+pi@octopi:~ $ systemctl status switchLED.service
+● switchLED.service - SwitchLED
+   Loaded: loaded (/etc/systemd/system/switchLED.service; disabled; vendor prese
+   Active: active (running) since Sun 2019-12-29 11:11:23 CET; 7s ago
+ Main PID: 810 (python)
+    Tasks: 1 (limit: 2077)
+   Memory: 4.3M
+   CGroup: /system.slice/switchLED.service
+           └─810 python /home/pi/SwitchLED/SwitchLED.py
 
+Dez 29 11:11:23 octopi systemd[1]: Started SwitchLED.
+```
 
 ### Entfernen des Scripts
 Solltest du eines Tages dich umentscheiden und das Programm aus dem Autostart nehmen wollen, kannst du dies mit: `sudo update-rc.d -f  toggle_light remove`

@@ -5,16 +5,6 @@ import os
 import RPi.GPIO as GPIO
 from time import sleep
 
-# 1-wire
-#os.system('modprobe w1-gpio')
-#os.system('modprobe wi-therm')
-
-#base_dir = '\sys\bus\w1\devices'
-#device_folder = glob.glob(base_dir + '28*')[0]
-#device_file = device_folder + 'w1_slave'
-
-
-
 
 # GPIO settings
 GPIO.setwarnings(False)

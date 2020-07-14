@@ -39,7 +39,7 @@ Damit das Skript beim booten auch aufgerufen wird, führen wir folgendes aus: `s
 
 
 ### Status prüfen
-Den Status des Dienstes kann man mit `ystemctl status switchLED.service` prüfen.
+Den Status des Dienstes kann man mit `systemctl status switchLED.service` prüfen.
 ```
 pi@octopi:~ $ systemctl status switchLED.service
 ● switchLED.service - SwitchLED

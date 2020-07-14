@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/home/pi/SwitchLED/SwitchLED.py
+ExecStart=/usr/bin/python -u SwitchLED.py
 WorkingDirectory=/home/pi/SwitchLED
 CPUSchedulingPolicy=fifo
 CPUSchedulingPriority=20
